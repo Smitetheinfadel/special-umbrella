@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<title>PCMO National Collections Booking Form</title>
+	<link href="collections_booking_form.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<h1>
+	Collections Booking Form
+	</h1>
+	<p>
+	Please complete the form below to book a collection.
+	</p>
+	<form action="http://students.open.ac.uk/mct/tt284/reflect/reflect.php" id="pcmoBookingForm" name="pcmoBookingForm" method="post">
+		<fieldset>
+			<legend>Collection details</legend>
+			<div class="collectionDetails">
+				<div class="mop">
+					<label for="mop">Method of posting: </label>
+					<select name="mop">
+						<option value="1stclass">1st Class</option>
+						<option value="2ndclass">2nd Class</option>
+						<option value="ecoclass">Economy Class</option>
+					</select>
+				</div>
+				<br />
+				<div class="postingdate">
+					<label for="postingdate">Date of posting: </label>
+					<input type="date" name="postingdate" id="postingdate" max="2020-12-31" min="2020-02-24">
+				</div>
+				<br />
+				<div class="volume">
+					<label for="volume">Volume: </label>
+					<input type="number" name="volume" id="volume" required min="1" max="100000" >
+				</div>
+				<br />
+				<div class="collectiontime">
+					<label for="collectiontime">Collection Time: </label>
+					<input type="time" name="collectiontime" id="collectiontime" max="20:00" min="08:00">
+				</div>
+				<br />
+				<div class="containers">
+					<label for="containers">No. of containers: </label>
+					<input type="number" name="containers" id="containers" required min="1" max="99" >
+				</div>
+				<br />
+				<div class="collectionAddress">
+					<label for="collectionAddress">Collection address: </label>
+					<textarea name="collectionAddress" id="collectionAddress" rows="10" cols="30"  required></textarea>
+				</div>
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>Customer details</legend>
+			<div class="customerDetails">
+				<div class="customerName">
+					<label for="customerName">Customer Name: </label>
+					<input type="text" name="customerName" id="customerName"  required>
+				</div>
+				<br />
+				<div class="collectionCentre">
+					<label for="collectionCentre">Collection Centre: </label>
+					<!-- This value would auto fill based on LA chosen -->
+					<input type="text" name="collectionCentre" id="collectionCentre"  required>
+				</div>
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>Contact details</legend>
+			<div class="contactDetails">
+				<div class="contactname">
+					<label for="contactname">Name: </label>
+					<input type="text" name="contactname" id="contactname"  required>
+				</div>
+				<br />
+				<div class="contacttelephone">
+					<label for="contacttelephone">Telephone: </label>
+					<input type="number" name="contacttelephone" id="contacttelephone" required>
+				</div>
+				<br />
+				<div class="contactemail">
+					<label for="contactemail">Email: </label>
+					<input type="email" name="contactemail" id="contactemail">
+				</div>
+			</div>
+		</fieldset>
+		<input class="pcmo-form-submit" type="submit" name="submit" id="submit" value="submit">
+	</form>
+</body>
+</html>
